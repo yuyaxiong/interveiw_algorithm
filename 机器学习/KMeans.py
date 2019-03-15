@@ -21,10 +21,18 @@ class KMeansR(object):
             # 计算样本归属于那个簇
             data['cluster'] = data[self.feature_list].apply(lambda x: self.min_distance(x, self.cluster), axis=1)
             print('iteration: %s' % i)
+            # return self.cluster, data
+            center_MSR=[]
+            for idx, center in enumerate(self.cluster):
+                center_MSR.append(int(self.calc_MSR(data[data['cluster'] == idx][self.feature_list], center)))
+            print('MSR:', sum(center_MSR)/len(center_MSR))
             # 重新计算簇中心
             df = data.groupby('cluster').mean().sort_index()
             self.cluster = [df.loc[idx, :] for idx in df.index.tolist()]
         return self.cluster
+
+    def calc_MSR(self, data, n):
+        return data.apply(lambda x: (x - n) ** 2 ).sum().sum() ** 1/2
 
     def predict(self, data):
         data['cluster'] = data[self.feature_list].apply(lambda x: self.min_distance(x, self.cluster), axis=1)
@@ -44,19 +52,22 @@ if __name__ == '__main__':
     feature_list = feature.columns.tolist()
     cluster = KMeansR()
     cluster.n_cluster = 2
-    cluster.num_iter = 10
+    cluster.num_iter = 20
     cluster.feature_list = feature_list
-    cluster.fit(feature)
-    feature['cluster2'] = cluster.predict(feature)
-    print(roc_auc_score(target, feature['cluster2']))
-    cluster1 = KMeans(n_clusters=2, max_iter=100)
-    cluster1.fit(feature)
-    feature['cluster1'] = cluster1.predict(feature)
-    print(roc_auc_score(target, feature['cluster1']))
-    lr_model = LogisticRegression()
-    lr_model.fit(feature, target)
-    feature['prob'] = lr_model.predict(feature)
-    print(roc_auc_score(target, feature['prob']))
+    cluster_data, df = cluster.fit(feature)
+    # print(df.columns.tolist())
+    # print(cluster.calc_MSR(df[df['cluster'] == 0][feature_list], cluster_data[0]))
+
+    # feature['cluster2'] = cluster.predict(feature)
+    # print(roc_auc_score(target, feature['cluster2']))
+    # cluster1 = KMeans(n_clusters=2, max_iter=100)
+    # cluster1.fit(feature)
+    # feature['cluster1'] = cluster1.predict(feature)
+    # print(roc_auc_score(target, feature['cluster1']))
+    # lr_model = LogisticRegression()
+    # lr_model.fit(feature, target)
+    # feature['prob'] = lr_model.predict(feature)
+    # print(roc_auc_score(target, feature['prob']))
 
 
 
