@@ -33,7 +33,7 @@ def LR_predict(weights, x):
 
 if __name__ == '__main__':
     feature, label = loadDataSet()
-    weights = LR_fit(feature, label, max_iteration=1000)
+    weights = LR_fit(feature, label, max_iteration=100)
     y_prob = LR_predict(weights, feature)
     auc = roc_auc_score(y_prob, label)
     print(auc)

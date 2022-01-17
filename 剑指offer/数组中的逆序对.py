@@ -35,8 +35,6 @@ class Solution(object):
                 copy[index_copy] = data[j]
                 index_copy -= 1
                 j -= 1
-
-
         # 要么多余i， 要么多余j，不会又多出i，又多出j
         for i in range(i, s, -1):
             copy[index_copy] = data[i]
@@ -45,7 +43,6 @@ class Solution(object):
         for j in range(j, s+length+1, -1):
             copy[index_copy] = data[j]
             index_copy -= 1
-
         return left + right + count
 
 if __name__ == '__main__':
