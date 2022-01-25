@@ -1,7 +1,7 @@
 from functools import cmp_to_key
 from typing import List
 
-#
+# 删除
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
         intervals = sorted(intervals, key=lambda x: x[0])
@@ -40,3 +40,4 @@ if __name__ == "__main__":
     t2 = time.time()
     print(t2 - t1)
     print(ret)
+    

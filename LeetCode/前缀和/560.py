@@ -1,3 +1,8 @@
+
+
+from typing import List
+
+# 560. 和为 K 的子数组
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
         acc_list, acc_dict = self.getAccList(nums)
@@ -21,3 +26,19 @@ class Solution:
                 acc_dict[val] += 1
         return acc_list, acc_dict
 
+
+class Solution1:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        preSumDict = dict()
+        preSumDict[0] = 1
+        res, sum0_i = 0, 0
+        for i in range(len(nums)):
+            sum0_i += nums[i]
+            sum0_j = sum0_i - k
+            if preSumDict.get(sum0_j) is not None:
+                res += preSumDict.get(sum0_j)
+            if preSumDict.get(sum0_i) is None:
+                preSumDict[sum0_i] = 1
+            else:
+                preSumDict[sum0_i] += 1
+        return res

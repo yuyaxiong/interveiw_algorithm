@@ -10,7 +10,7 @@ class NumMatrix:
                 acc_list.append(acc_line + self.acc_matrix[i-1][j])
             self.acc_matrix.append(acc_list)
 
-    def getAccListt(self, n_list):
+    def getAccListt(self, n_list):  
         acc = 0
         tmp = []
         for n in n_list:
