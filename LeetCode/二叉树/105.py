@@ -35,49 +35,6 @@ class Solution:
         return left_preorder, right_preorder
 
 
-class Solution:
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
-
-
-
-        val = preorder.pop(0)
-        node = TreeNode(val)
-        in_idx = inorder.index(val)
-        left_inorder = inorder[:in_idx]
-        right_inorder = inorder[in_idx+1:]
-        left_preorder, right_preorder = self.getLeftRight(preorder, left_inorder)
-    
-        order_list = [[node, left_preorder, left_inorder, right_preorder, right_inorder]]
-
-        while len(order_list) > 0:
-            for orders in order_list:
-                node = orders[0]
-                left_preorder, left_inorder = orders[1], orders[2]
-                right_preorder, right_inorder = orders[3], orders[4]
-                left_val = left_preorder.pop(0)
-                left_node = TreeNode(left_val)
-                left_inorder_idx = left_inorder.index(left_val)
-                left_left_inorder = left_inorder[:left_inorder_idx]
-                left_right_inorder = left_inorder[left_inorder_idx + 1:]
-                left_left_pre
-
-            
-        return node
-
-    def getRootNode()
-
-    def getLeftRight(self, preorder, left_inorder):
-        left_preorder = []
-        right_preorder = []
-        left_inorder_dict = {n:1 for n in left_inorder}
-        for o in preorder:
-            if o in left_inorder_dict:
-                left_preorder.append(o)
-            else:
-                right_preorder.append(o)
-        return left_preorder, right_preorder
-
-
 def testCase():
     import json
     import time
