@@ -4,8 +4,12 @@ class TreeNode(object):
         self.val = x
         self.left = None
         self.right = None
-
+# 297. 二叉树的序列化与反序列化
 class Codec:
+    def __init__(self):
+        self.sep=','
+        self.null="#"
+
 
     def serialize(self, root):
         """Encodes a tree to a single string.
@@ -13,20 +17,17 @@ class Codec:
         :type root: TreeNode
         :rtype: str
         """
-        if root is None:
-            return ''
-        ser_list = []
-        self.serHelp(root, ser_list)
-        ser_list = [str(s) for s in ser_list]
-        return "|".join(ser_list)
+        result_list = []
+        self.serHelp(root, result_list)
+        return self.sep.join(result_list)
 
-    def serHelp(self, root, ser_list):
+    def serHelp(self, root, result_list):
         if root is None:
-            ser_list.append('None')
+            result_list.append(self.null)
             return 
-        ser_list.append(root.val)
-        self.serHelp(root.left, ser_list)
-        self.serHelp(root.right, ser_list)
+        result_list.append(str(root.val))
+        self.serHelp(root.left, result_list)
+        self.serHelp(root.right, result_list)
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
@@ -34,32 +35,26 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """
-        if len(data) == 0:
+        data_list = data.split(self.sep)
+        return self.desHelp(data_list)
+
+    def desHelp(self, data_list):
+        if len(data_list) == 0:
             return None
-        ser_list = [None if d == 'None' else int(d) for d in data.split("|")]
-        node, i = self.getLeftRightNode(ser_list, 0)
+        first = data_list.pop(0)
+        if first == self.null:
+            return None
+        node = TreeNode(int(first))
+        node.left = self.desHelp(data_list)
+        node.right = self.desHelp(data_list)
         return node
 
-    def getLeftRightNode(self, ser_list, i):
-        if i == len(ser_list)-1:
-            node = ser_list[i]
-            return node, i+1
 
-        node = TreeNode(ser_list[i])
-        if ser_list[i+1] is None:
-            if ser_list[i+2] is None:
-                i += 3
-                return node, i
-            else:
-                i += 2
-                node.right, i = self.getLeftRightNode(ser_list, i)
-                return node, i
-        else:
-            i += 1
-            node.left, i = self.getLeftRightNode(ser_list, i)
-            node.right, i = self.getLeftRightNode(ser_list, i)
-            return node, i                
 
+# Your Codec object will be instantiated and called as such:
+# ser = Codec()
+# deser = Codec()
+# ans = deser.deserialize(ser.serialize(root))
 
 # Your Codec object will be instantiated and called as such:
 # ser = Codec()
@@ -128,6 +123,20 @@ def testCase3():
     # print(data)
     node = codec.deserialize(data)
     print_node([node])
+
+[4,-7,-3,null,null,-9,-3, 9,-7,-4,null,6,null,-6,-6,null,null,0,6,5,null,9,null,null,-1,-4,null,null,null,-2]
+def testCase4():
+    node = TreeNode()
+    tn1 = TreeNode(4)
+    tn2 = TreeNode(-7)
+    tn3 = TreeNode(-3)
+    tn1.left = tn2
+    tn1.right = tn3
+    tn4 = TreeNode(-9)
+    tn5 = TreeNode(-3)
+    tn3.left = tn4 
+    tn3.right = tn5
+
 
 
 if __name__ == "__main__":
