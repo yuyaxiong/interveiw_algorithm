@@ -23,7 +23,7 @@ class Solution:
             node.left, node.right = right_node, left_node
             if left_node is not None:
                 tmp.append(left_node)
-            if right_node is None:
+            if right_node is not None:
                 tmp.append(right_node)
         node_list = tmp
         self.invertTreeHelp(node_list)
