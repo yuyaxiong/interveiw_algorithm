@@ -3,7 +3,7 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-
+# 反转链表2
 class Solution:
     def reverseBetween(self, head: ListNode, left: int, right: int) -> ListNode:
         p_head = head 

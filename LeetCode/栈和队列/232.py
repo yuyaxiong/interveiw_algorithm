@@ -1,5 +1,5 @@
 from collections import deque
-
+# 232.用栈实现队列
 class MyQueue:
 
     def __init__(self):

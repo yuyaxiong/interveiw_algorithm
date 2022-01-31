@@ -1,7 +1,7 @@
 # Definition for a binary tree node.
 from typing import Optional
 
-
+# 二叉搜索树中第K小的元素
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

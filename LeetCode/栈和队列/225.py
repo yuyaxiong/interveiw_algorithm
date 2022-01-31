@@ -1,6 +1,6 @@
 import queue
 
-
+# 225.用队列实现栈
 def print_queue(que):
     n_list = []
     while not que.empty():

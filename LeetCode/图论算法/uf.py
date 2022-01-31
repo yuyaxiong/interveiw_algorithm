@@ -1,6 +1,3 @@
-# 990. 等式方程的可满足性
-from typing import List
-
 
 class UF():
     def __init__(self, n):
@@ -35,22 +32,3 @@ class UF():
 
     def count(self):
         return self.count
-
-class Solution:
-    def equationsPossible(self, equations: List[str]) -> bool:
-        uf = UF(26)
-        a_id = ord('a')
-        for eq in equations:
-            if eq[1] == '=':
-                x = eq[0]
-                y = eq[3]
-                uf.union(ord(x) - a_id, ord(y) - a_id)
-        for eq in equations:
-            if eq[1] == '!':
-                x = eq[0]
-                y = eq[3]
-                if uf.connected(ord(x) - a_id, ord(y) - a_id):
-                    return False
-        return True
-
-

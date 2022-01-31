@@ -3,7 +3,7 @@ class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
-
+# 142.环形链表2
 class Solution:
     def detectCycle(self, head: ListNode) -> ListNode:
         slow, fast = head, head 

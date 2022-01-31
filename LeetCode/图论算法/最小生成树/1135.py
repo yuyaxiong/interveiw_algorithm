@@ -35,19 +35,22 @@ class UF():
     def count(self):
         return self.count
 
-
+# 1135.最低成本连通所有城市
 class Solution:
     def minimumCost(n:int, connections: List[List[int]]):
         uf = UF(n+1)
+        # 最小生成树，按照weight升序排序
         connections = sorted(connections, key=lambda x: x[2])
         mst = 0.0
         for edge in connections:
             u, v, weight = edge[0], edge[1], edge[2]
+            # 成环就跳过
             if uf.connected(u, v):
                 continue
             mst += weight
             uf.union(u, v)
-        return mst  if uf.count() == 2 else -1
+        # 保证所有节点连通，因为0没有被使用，额外占有一个，因此总共是2
+        return mst if uf.count() == 2 else -1
 
 
 

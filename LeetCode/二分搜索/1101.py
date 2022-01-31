@@ -1,6 +1,6 @@
 from typing import List
 
-
+# 1011. 在 D 天内送达包裹的能力
 class Solution:
     def shipWithinDays(self, weights: List[int], days: int) -> int:
         max_val = sum(weights)

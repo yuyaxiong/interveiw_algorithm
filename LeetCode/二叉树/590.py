@@ -4,7 +4,7 @@
 
 from typing import List
 
-
+# 590. N 叉树的后序遍历
 class Node:
     def __init__(self, val=None, children=None):
         self.val = val

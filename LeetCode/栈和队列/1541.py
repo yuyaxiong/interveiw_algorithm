@@ -1,3 +1,4 @@
+# 1541.平衡括号字符串的最少插入次数
 class Solution:
     def minInsertions(self, s: str) -> int:
         left = []

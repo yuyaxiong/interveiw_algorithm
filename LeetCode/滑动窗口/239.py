@@ -7,7 +7,7 @@
 """
 from typing import List
 
-
+# 滑动窗口最大值
 class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         win, ret = [], []
