@@ -31,13 +31,8 @@ class Solution:
                     # 没有符合的数字
                     if status is False:
                         board[i][j] = "."
-                        return status
-
-                    
-                        
+                        return status 
         return True
-
-
 
     def get_remain_n(self, idx_list, board):
         n_list = [str(i) for i in range(1, 10)]

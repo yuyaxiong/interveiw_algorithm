@@ -1,4 +1,5 @@
 # Definition for a binary tree node.
+# 94. 二叉树的中序遍历 
 from typing import List, Optional
 
 
@@ -8,7 +9,6 @@ class TreeNode:
         self.left = left
         self.right = right
 
-# 94. 二叉树的中序遍历 
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         result = []

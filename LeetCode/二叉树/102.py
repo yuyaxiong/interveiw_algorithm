@@ -1,11 +1,13 @@
 # Definition for a binary tree node.
+# 102. 二叉树的层序遍历
+from typing import List
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
 
-# 102. 二叉树的层序遍历
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
         if root is None:

@@ -1,6 +1,6 @@
 from typing import List
 
-# 视频拼接
+# 1024.视频拼接
 class Solution:
     def videoStitching(self, clips: List[List[int]], time: int) -> int:
         clips = sorted(clips, key=lambda x: x[0])

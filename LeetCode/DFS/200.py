@@ -1,7 +1,6 @@
 # 200. 岛屿数量
 from typing import List
 
-
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         row, col = len(grid), len(grid[0])

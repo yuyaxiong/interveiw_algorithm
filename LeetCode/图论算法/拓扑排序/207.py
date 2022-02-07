@@ -1,4 +1,6 @@
 # 207. 课程表
+from typing import List
+
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         # 递归的点，防止递归的loop

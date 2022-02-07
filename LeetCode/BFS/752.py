@@ -1,7 +1,5 @@
-
 # 752. 打开转盘锁
 from typing import List
-
 
 class Solution:
     def openLock(self, deadends: List[str], target: str) -> int:

@@ -1,7 +1,5 @@
-
 # 22. 括号生成
 from typing import List
-
 
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:

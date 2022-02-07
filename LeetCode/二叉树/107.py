@@ -8,7 +8,6 @@ class TreeNode:
         self.left = left
         self.right = right
 
-
 class Solution:
     def levelOrderBottom(self, root: TreeNode) -> List[List[int]]:
         if root is None:

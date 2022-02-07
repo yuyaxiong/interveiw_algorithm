@@ -2,7 +2,6 @@
 # 501. 二叉搜索树中的众数
 from typing import List
 
-
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

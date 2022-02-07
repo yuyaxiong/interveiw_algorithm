@@ -1,7 +1,7 @@
+# 56.合并区间
 from functools import cmp_to_key
 from typing import List
 
-# 合并区间
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         def cmp(t1, t2):

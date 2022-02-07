@@ -1,5 +1,3 @@
-
-
 # 20.有效的括号
 class Solution:
     def isValid(self, s: str) -> bool:

@@ -1,7 +1,7 @@
 # Definition for a binary tree node.
 from typing import List, Optional
 
-# 前序遍历
+# 144.二叉树的前序遍历
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -38,14 +38,5 @@ class Solution1:
                 tmp.append(node.right)
             node_list = tmp + node_list
         return result 
-
-
-def testCase():
-    
-         
-        
-        
-
-        
         
 

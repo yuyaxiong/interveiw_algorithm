@@ -1,7 +1,6 @@
 # 39. 组合总和
 from typing import List
 
-
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         result_list = []

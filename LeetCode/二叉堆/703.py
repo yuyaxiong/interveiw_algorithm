@@ -1,10 +1,8 @@
-
-
+# 703. 数据流中的第 K 大元素
 from typing import List
 import heapq
 
 
-# 703. 数据流中的第 K 大元素
 class KthLargest:
     def __init__(self, k: int, nums: List[int]):
         class SmallHeap:

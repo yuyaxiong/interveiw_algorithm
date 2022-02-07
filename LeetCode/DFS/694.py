@@ -31,6 +31,8 @@ def testCase():
     grid = [["1", "1", "0", "0", "0"],  ["1", "1", "0", "0", "0"], ["0", "0", "0", "1", "1"], ["0", "0", "0", "1", "1"]]
     sol = Solution()
     ret = sol.numDistinctIslands(grid)
+
+    
     print(ret)
 
 

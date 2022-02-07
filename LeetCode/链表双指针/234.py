@@ -3,7 +3,7 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-# 回文链表
+# 234.回文链表
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:        
         n_list = []

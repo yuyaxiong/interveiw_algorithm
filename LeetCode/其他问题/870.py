@@ -1,3 +1,7 @@
+# 870. 优势洗牌
+from typing import List
+
+
 class Solution:
     def advantageCount(self, nums1: List[int], nums2: List[int]) -> List[int]:
         if len(nums1) != len(nums2):

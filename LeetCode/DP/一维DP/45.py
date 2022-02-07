@@ -1,7 +1,6 @@
 # 45. 跳跃游戏 II
 from typing import List
 
-
 class Solution:
     def jump(self, nums: List[int]) -> int:
         n = len(nums)

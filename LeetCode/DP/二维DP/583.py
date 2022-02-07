@@ -4,7 +4,6 @@ class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
         self.memo = [[-1 for _ in range(len(word2))] for _ in range(len(word1))]
         res = self.dp(word1, 0, word2, 0)
-        print(self.memo)
         return res
 
     def dp(self, word1, i, word2, j):

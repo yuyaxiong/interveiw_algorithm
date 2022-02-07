@@ -1,5 +1,3 @@
-
-
 import heapq
 # 295.数据流的中位数
 class MedianFinder:

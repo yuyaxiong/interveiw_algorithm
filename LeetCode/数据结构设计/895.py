@@ -1,5 +1,3 @@
-
-
 #895. 最大频率栈
 class FreqStack:
 

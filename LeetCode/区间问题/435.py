@@ -1,7 +1,7 @@
+# 435.无重叠区间
 from functools import cmp_to_key
 from typing import List
 
-# 删除
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
         intervals = sorted(intervals, key=lambda x: x[0])

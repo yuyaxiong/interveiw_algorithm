@@ -3,7 +3,7 @@
 # You should not implement it, or speculate about its implementation
 # """
 
-
+# 341. 扁平化嵌套列表迭代器
 class NestedInteger:
 
    def isInteger(self) -> bool:

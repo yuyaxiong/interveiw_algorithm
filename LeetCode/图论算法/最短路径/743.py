@@ -6,8 +6,6 @@ class State:
     def __init__(self, id, distFromStart):
         self.id = id 
         self.dist_from_start = distFromStart
-    
-
 
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:

@@ -1,4 +1,3 @@
-
 # 213. 打家劫舍 II
 from typing import List
 

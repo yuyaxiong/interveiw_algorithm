@@ -1,3 +1,4 @@
+# 1584.连接所有点的最小费用
 from typing import List
 
 class UF():

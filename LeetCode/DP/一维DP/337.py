@@ -1,4 +1,5 @@
 # Definition for a binary tree node.
+# 337. 打家劫舍 III
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -22,7 +23,6 @@ class Solution:
         if root.right is not None:
             do_it += self.robHelp(root.right.left) + self.robHelp(root.right.right)
         not_do = self.robHelp(root.left) + self.robHelp(root.right)
-        print(root,root.val , do_it, not_do)
         res = max(do_it, not_do)
         self.memo[root] = res
         return res

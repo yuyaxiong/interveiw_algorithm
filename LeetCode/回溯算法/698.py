@@ -2,7 +2,6 @@
 # leetcode 暴力搜索会超时
 from typing import List
 
-
 class Solution:
     def canPartitionKSubsets(self, nums: List[int], k: int) -> bool:
         if k > len(nums):

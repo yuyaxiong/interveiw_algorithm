@@ -1,7 +1,7 @@
+# 1288.删除被覆盖区间
 from functools import cmp_to_key
 from typing import List
 
-#删除被覆盖区间
 class Solution:
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         def cmp(t1, t2):

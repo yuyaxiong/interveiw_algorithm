@@ -1,8 +1,6 @@
-
-
+# 560. 和为 K 的子数组
 from typing import List
 
-# 560. 和为 K 的子数组
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
         acc_list, acc_dict = self.getAccList(nums)

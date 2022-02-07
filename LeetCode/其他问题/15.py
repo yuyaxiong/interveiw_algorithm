@@ -1,6 +1,6 @@
 from typing import List
 
-#三数之和
+#15.三数之和
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         nums = sorted(nums)

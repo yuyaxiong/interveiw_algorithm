@@ -1,3 +1,7 @@
+# 1020.飞地的数量
+from typing import List
+
+
 class Solution:
     def numEnclaves(self, grid: List[List[int]]) -> int:
         row, col = len(grid), len(grid[0])

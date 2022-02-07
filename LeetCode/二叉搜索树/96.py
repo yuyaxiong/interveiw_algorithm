@@ -1,4 +1,3 @@
-
 # 96. 不同的二叉搜索树
 class Solution:
     def numTrees(self, n: int) -> int:

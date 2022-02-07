@@ -1,7 +1,6 @@
 # 300. 最长递增子序列
 from typing import List
 
-
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
         dp = [1 for _ in nums]

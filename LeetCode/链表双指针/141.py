@@ -1,9 +1,7 @@
-
-
 # Definition for singly-linked list.
 from typing import Optional
 
-#环形链表
+# 141.环形链表
 class ListNode:
     def __init__(self, x):
         self.val = x

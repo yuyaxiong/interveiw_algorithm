@@ -2,7 +2,6 @@
 # 312. 戳气球
 from typing import List
 
-
 class Solution:
     def maxCoins(self, nums: List[int]) -> int:
         n = len(nums)

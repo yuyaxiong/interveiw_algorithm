@@ -1,4 +1,3 @@
-
 # 1905. 统计子岛屿
 from typing import List
 

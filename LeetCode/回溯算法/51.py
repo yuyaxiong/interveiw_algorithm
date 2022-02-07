@@ -1,7 +1,6 @@
 #  51. N 皇后
 from typing import List
 
-
 class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
         self.res = []
@@ -20,7 +19,6 @@ class Solution:
             if not self.isValid(board, row, col):
                 continue
             board[row][col] = 'Q'
-            # print(board, row, col)
             self.backtrack(board, row + 1)
             board[row][col] = '.'
 

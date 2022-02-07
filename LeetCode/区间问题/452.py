@@ -1,6 +1,6 @@
 from typing import List
 
-# 用最少数量的箭引爆气球
+# 452.用最少数量的箭引爆气球
 class Solution:
     def findMinArrowShots(self, points: List[List[int]]) -> int:
         if len(points) <= 0:

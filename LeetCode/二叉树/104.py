@@ -1,7 +1,7 @@
 # Definition for a binary tree node.
+# 104.二叉树最大深度
 from typing import Optional
 
-# 二叉树最大深度
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -29,9 +29,6 @@ def testCase():
     sol = Solution()
     ret = sol.maxDepth(tn1)
     print(ret)
-
-
-
 
 if __name__ == "__main__":
     testCase()

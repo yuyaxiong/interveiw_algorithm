@@ -1,6 +1,4 @@
-
-
-# 
+# 146. LRU 缓存
 from collections import OrderedDict
 
 class LRUCache:

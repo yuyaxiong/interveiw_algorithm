@@ -1,6 +1,6 @@
 from typing import List
 
-# 四数之和
+# 18.四数之和
 class Solution:
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
         nums = sorted(nums)

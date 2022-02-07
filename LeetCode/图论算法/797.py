@@ -1,7 +1,5 @@
 # 797. 所有可能的路径
-
 from typing import List
-
 
 class Solution:
     def allPathsSourceTarget(self, graph: List[List[int]]) -> List[List[int]]:

@@ -2,7 +2,6 @@
 # 1094. 拼车
 from typing import List
 
-# 差值数组
 class Solution:
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         max_stop = max([trip[2] for trip in trips])

@@ -1,5 +1,5 @@
+# 787.K站中专内最便宜的航班
 from typing import List
-
 import sys
 
 class Solution:

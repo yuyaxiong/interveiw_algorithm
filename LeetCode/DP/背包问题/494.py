@@ -1,10 +1,6 @@
 # 494. 目标和
-
 from typing import List
-
-
-        
-
+    
 class Solution:
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
         result = 0
